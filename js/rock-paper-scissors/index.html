@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Rock Paper Scissors</h1>
+
+    <!-- Level Selection Screen -->
+    <div id="level-screen" class="screen active">
+        <p>Welcome! Please select a difficulty level:</p>
+        <div class="btn-group">
+            <button class="btn" id="btn-easy">Easy (3 Rounds)</button>
+            <button class="btn" id="btn-medium">Medium (5 Rounds)</button>
+            <button class="btn" id="btn-diff">Difficult (9 Rounds)</button>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen">
+        <p id="round-title">Round 1</p>
+        <div class="score-board">
+            <div>YOU: <span id="player-score">0</span></div>
+            <div>COMPILER: <span id="comp-score">0</span></div>
+        </div>
+        <p>Make your move:</p>
+        <div class="btn-group">
+            <button class="btn" id="btn-rock">🪨 ROCK</button>
+            <button class="btn" id="btn-paper">📄 PAPER</button>
+            <button class="btn" id="btn-scissors">✂️ SCISSORS</button>
+        </div>
+        <div class="logs" id="game-logs">Game started. Make your choice!</div>
+    </div>
+
+    <!-- GameOver Screen -->
+    <div id="result-screen" class="screen">
+        <h2 id="final-status"></h2>
+        <div class="score-board">
+            <div>Final Score: <span id="final-score"></span></div>
+        </div>
+        <button class="btn" id="btn-restart">Play Again</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
